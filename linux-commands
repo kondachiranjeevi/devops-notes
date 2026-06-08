@@ -16,8 +16,6 @@
 | `du -sh <dir>` | Show directory size |
 | `df -h` | Show disk usage of all mounted filesystems |
 
----
-
 ## File Viewing & Editing
 
 | Command | Description |
@@ -31,8 +29,6 @@
 | `wc -l <file>` | Count lines in a file |
 | `diff <file1> <file2>` | Show differences between two files |
 
----
-
 ## Permissions & Ownership
 
 | Command | Description |
@@ -42,8 +38,6 @@
 | `chown user:group <file>` | Change file owner and group |
 | `ls -l` | View file permissions |
 | `umask` | Show/set default permission mask |
-
----
 
 ## Process Management
 
@@ -58,8 +52,6 @@
 | `bg` / `fg` | Send job to background / foreground |
 | `nohup <cmd> &` | Run command immune to hangups |
 | `jobs` | List background jobs |
-
----
 
 ## Networking
 
@@ -79,8 +71,6 @@
 | `scp <src> user@host:<dst>` | Securely copy files to remote host |
 | `rsync -avz <src> <dst>` | Sync files/directories efficiently |
 
----
-
 ## Package Management
 
 ### Debian/Ubuntu (apt)
@@ -99,8 +89,6 @@
 | `dnf install <pkg>` | Install a package |
 | `dnf remove <pkg>` | Remove a package |
 
----
-
 ## Disk & Storage
 
 | Command | Description |
@@ -110,8 +98,6 @@
 | `mount /dev/sdb1 /mnt` | Mount a partition |
 | `umount /mnt` | Unmount a partition |
 | `mkfs.ext4 /dev/sdb1` | Format partition as ext4 |
-
----
 
 ## System Info
 
@@ -126,8 +112,6 @@
 | `dmesg \| tail` | Show recent kernel messages |
 | `journalctl -xe` | View systemd logs |
 
----
-
 ## Systemd Services
 
 | Command | Description |
@@ -140,8 +124,6 @@
 | `systemctl disable <svc>` | Disable service on boot |
 | `systemctl list-units` | List all active units |
 
----
-
 ## Archiving & Compression
 
 | Command | Description |
@@ -150,8 +132,6 @@
 | `tar -xzvf archive.tar.gz` | Extract gzip archive |
 | `zip -r archive.zip <dir>` | Create zip archive |
 | `unzip archive.zip` | Extract zip archive |
-
----
 
 ## User Management
 
@@ -166,8 +146,6 @@
 | `sudo <cmd>` | Run command as superuser |
 | `last` | Show last login history |
 
----
-
 ## Text Processing
 
 | Command | Description |
@@ -179,8 +157,6 @@
 | `cut -d',' -f1 <file>` | Cut by delimiter |
 | `tr 'a-z' 'A-Z'` | Translate characters |
 | `xargs` | Build commands from stdin |
-
----
 
 ## Shortcuts & Tips
 
