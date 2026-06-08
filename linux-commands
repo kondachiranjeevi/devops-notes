@@ -1,0 +1,196 @@
+# Linux Commands Cheatsheet
+
+## File & Directory Management
+
+| Command | Description |
+|---------|-------------|
+| `ls -la` | List all files with details (including hidden) |
+| `pwd` | Print current working directory |
+| `cd <dir>` | Change directory |
+| `mkdir -p <dir>` | Create directory (with parents) |
+| `rm -rf <dir>` | Remove directory and contents recursively |
+| `cp -r <src> <dst>` | Copy files/directories recursively |
+| `mv <src> <dst>` | Move or rename files/directories |
+| `touch <file>` | Create an empty file or update timestamp |
+| `find / -name "*.log"` | Find files by name |
+| `du -sh <dir>` | Show directory size |
+| `df -h` | Show disk usage of all mounted filesystems |
+
+---
+
+## File Viewing & Editing
+
+| Command | Description |
+|---------|-------------|
+| `cat <file>` | Print file contents |
+| `less <file>` | View file with scroll support |
+| `head -n 20 <file>` | Show first 20 lines |
+| `tail -n 20 <file>` | Show last 20 lines |
+| `tail -f <file>` | Follow file in real-time (useful for logs) |
+| `grep -rn "pattern" <dir>` | Search for pattern recursively |
+| `wc -l <file>` | Count lines in a file |
+| `diff <file1> <file2>` | Show differences between two files |
+
+---
+
+## Permissions & Ownership
+
+| Command | Description |
+|---------|-------------|
+| `chmod 755 <file>` | Set file permissions (rwxr-xr-x) |
+| `chmod +x <file>` | Make file executable |
+| `chown user:group <file>` | Change file owner and group |
+| `ls -l` | View file permissions |
+| `umask` | Show/set default permission mask |
+
+---
+
+## Process Management
+
+| Command | Description |
+|---------|-------------|
+| `ps aux` | List all running processes |
+| `top` | Interactive process viewer |
+| `htop` | Enhanced interactive process viewer |
+| `kill <PID>` | Send SIGTERM to process |
+| `kill -9 <PID>` | Force kill a process |
+| `pkill <name>` | Kill processes by name |
+| `bg` / `fg` | Send job to background / foreground |
+| `nohup <cmd> &` | Run command immune to hangups |
+| `jobs` | List background jobs |
+
+---
+
+## Networking
+
+| Command | Description |
+|---------|-------------|
+| `ip a` | Show IP addresses |
+| `ip r` | Show routing table |
+| `ping <host>` | Test connectivity to a host |
+| `curl -I <url>` | Fetch HTTP headers |
+| `wget <url>` | Download a file |
+| `ss -tuln` | Show listening ports |
+| `netstat -tulnp` | Show ports and associated processes |
+| `traceroute <host>` | Trace route to host |
+| `nslookup <domain>` | DNS lookup |
+| `dig <domain>` | Detailed DNS lookup |
+| `ssh user@host` | Connect to remote host via SSH |
+| `scp <src> user@host:<dst>` | Securely copy files to remote host |
+| `rsync -avz <src> <dst>` | Sync files/directories efficiently |
+
+---
+
+## Package Management
+
+### Debian/Ubuntu (apt)
+| Command | Description |
+|---------|-------------|
+| `apt update` | Update package index |
+| `apt upgrade` | Upgrade installed packages |
+| `apt install <pkg>` | Install a package |
+| `apt remove <pkg>` | Remove a package |
+| `apt search <pkg>` | Search for a package |
+
+### RHEL/CentOS (dnf/yum)
+| Command | Description |
+|---------|-------------|
+| `dnf update` | Update all packages |
+| `dnf install <pkg>` | Install a package |
+| `dnf remove <pkg>` | Remove a package |
+
+---
+
+## Disk & Storage
+
+| Command | Description |
+|---------|-------------|
+| `lsblk` | List block devices |
+| `fdisk -l` | List disk partitions |
+| `mount /dev/sdb1 /mnt` | Mount a partition |
+| `umount /mnt` | Unmount a partition |
+| `mkfs.ext4 /dev/sdb1` | Format partition as ext4 |
+
+---
+
+## System Info
+
+| Command | Description |
+|---------|-------------|
+| `uname -a` | Show kernel and system info |
+| `hostname` | Show or set system hostname |
+| `uptime` | Show system uptime and load |
+| `free -h` | Show memory usage |
+| `lscpu` | Show CPU information |
+| `lsusb` / `lspci` | List USB / PCI devices |
+| `dmesg \| tail` | Show recent kernel messages |
+| `journalctl -xe` | View systemd logs |
+
+---
+
+## Systemd Services
+
+| Command | Description |
+|---------|-------------|
+| `systemctl start <svc>` | Start a service |
+| `systemctl stop <svc>` | Stop a service |
+| `systemctl restart <svc>` | Restart a service |
+| `systemctl status <svc>` | Check service status |
+| `systemctl enable <svc>` | Enable service on boot |
+| `systemctl disable <svc>` | Disable service on boot |
+| `systemctl list-units` | List all active units |
+
+---
+
+## Archiving & Compression
+
+| Command | Description |
+|---------|-------------|
+| `tar -czvf archive.tar.gz <dir>` | Create gzip-compressed archive |
+| `tar -xzvf archive.tar.gz` | Extract gzip archive |
+| `zip -r archive.zip <dir>` | Create zip archive |
+| `unzip archive.zip` | Extract zip archive |
+
+---
+
+## User Management
+
+| Command | Description |
+|---------|-------------|
+| `whoami` | Show current user |
+| `id` | Show user/group IDs |
+| `adduser <user>` | Add a new user |
+| `passwd <user>` | Change user password |
+| `usermod -aG sudo <user>` | Add user to sudo group |
+| `su - <user>` | Switch to another user |
+| `sudo <cmd>` | Run command as superuser |
+| `last` | Show last login history |
+
+---
+
+## Text Processing
+
+| Command | Description |
+|---------|-------------|
+| `awk '{print $1}' <file>` | Print first column |
+| `sed 's/old/new/g' <file>` | Replace text in file |
+| `sort <file>` | Sort lines |
+| `uniq` | Remove duplicate lines |
+| `cut -d',' -f1 <file>` | Cut by delimiter |
+| `tr 'a-z' 'A-Z'` | Translate characters |
+| `xargs` | Build commands from stdin |
+
+---
+
+## Shortcuts & Tips
+
+| Shortcut | Description |
+|----------|-------------|
+| `Ctrl+C` | Kill current process |
+| `Ctrl+Z` | Suspend current process |
+| `Ctrl+D` | Exit shell / EOF |
+| `Ctrl+L` | Clear terminal |
+| `!!` | Repeat last command |
+| `!$` | Last argument of previous command |
+| `history` | Show command history |
+| `Ctrl+R` | Reverse search command history |
